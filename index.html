@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>	Javascript</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+
+
+<body>
+
+		<h1>Shopping List</h1>
+
+		<p id="first">Get it done</p>
+
+		<p class="second">No excuses</p>
+
+		<input id="userinput" type="text" placeholder="enter items"> 
+
+		<!-- <input id="userinput" type="text" placeholder="enter items" onkeypress="addItem()">
+ -->
+		<br>
+
+		<!-- <button  onclick="addItem()" id="enter">Click me</button> -->
+		<button id="add">Add</button>
+
+		<button id="delete">Delete</button>
+
+		<button onclick="myFunction()">Clear</button>
+
+
+
+
+
+
+		<ul id="myList">
+
+			<li>Notebook</li>
+
+			<li>Milk</li>
+
+			<li>Ballpen</li>
+
+			<li>Pencil</li>
+
+			<li>Candles</li>
+
+		</ul>
+
+<script>
+function myFunction() {
+  var list = document.getElementById("myList");s
+  //do
+  list.removeChild(list.childNodes[0]);
+  //while list.childNodes[0] <> "" 
+}
+</script>
+
+
+
+<script>
+
+var buttonAdd = document.getElementById("add");
+
+var buttonRemove = document.getElementById("delete");
+
+var buttonClear = document.getElementById("clear");
+
+var input = document.getElementById("userinput");
+
+var ul =  document.querySelector("ul");
+
+
+
+buttonAdd.addEventListener("click", function(){
+
+	if (input.value.length > 0) {
+
+	var li = document.createElement("li");
+
+	li.appendChild(document.createTextNode(input.value));
+
+	ul.appendChild(li);
+
+	input.value = "";
+
+		
+
+	}
+
+
+
+});
+
+
+buttonRemove.removeEventListener("click", function(){
+
+	if (input.value.length > 0) {
+
+	var list1 = document.
+
+	li.appendChild(document.removeTextNode(input.value));
+
+	ul.appendChild(li);
+
+	input.value = "";
+
+		
+
+	}
+
+
+
+});
+
+buttonClear.removeEventListener("click", function(){
+
+  var list = document.getElementById("myList");
+  list.removeChild(list.childNodes[0]);
+
+});
+
+//buttonClear.console.clear();
+
+
+
+
+// //Input for enter
+
+// input.addEventListener('keypress', function(e){
+
+// 	if (input.value.length > 0 && e.keyCode==13){
+
+// 	var li = document.createElement("li");
+
+// 	li.appendChild(document.createTextNode(input.value));
+
+// 	ul.appendChild(li);
+
+// 	input.value = "";
+
+		
+
+// 	}	
+
+	
+
+// });
+
+// function inputLength(){
+
+// 	return input.value.length;
+
+// }
+
+
+
+// function createListElement() {
+
+// 	var li = document.createElement("li");
+
+// 	li.appendChild(document.createTextNode(input.value));
+
+// 	ul.appendChild(li);
+
+// 	input.value = "";
+
+
+
+// }
+
+
+
+// function addItem(){
+
+
+
+// 	if (input.value.length > 0) {
+
+// 	var li = document.createElement("li");
+
+// 	li.appendChild(document.createTextNode(input.value));
+
+// 	ul.appendChild(li);
+
+// 	input.value = "";
+
+		
+
+// 	}
+
+
+
+// };
+
+	
+
+// function addItemPress(e){
+
+
+
+// 	if (input.value.length > 0 && e.keyCode==13){
+
+// 	var li = document.createElement("li");
+
+// 	li.appendChild(document.createTextNode(input.value));
+
+// 	ul.appendChild(li);
+
+// 	input.value = "";
+
+		
+
+// 	}	
+
+
+
+// };
+
+
+
+// function ultipress(e){
+
+// 	if (e.keyCode === 13)
+
+// }
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
